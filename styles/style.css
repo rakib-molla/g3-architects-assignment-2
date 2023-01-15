@@ -275,6 +275,37 @@ ul li {
 .company{
     margin-left: 60px;
 }
+/* ==>> feature products styles <<==  */
+
+
+.containers {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    overflow: hidden;
+
+}
+
+.feature_descriptions {
+    font-weight: 700;
+    font-size: 38px;
+    margin-bottom: 16px;
+}
+
+
+.desc {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+.fa-solid {
+    margin-right: 5px;
+}
+
 /* ==>> footer styles <<==  */
 .main-footer {
 
@@ -291,4 +322,39 @@ ul li {
     font-weight: 400;
     font-size: 20px;
     color: var(--body_font_color);
+}
+
+/* ==>> responsive  styles <<==  */
+@media only screen and (max-width: 768px) {
+    .main-header{
+        width: 50%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .container{
+        flex-direction: column;
+        width: 50px;
+    }
+    .awards{
+        flex-direction: column;
+    }
+    .second-features{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 500px 500px;
+    }
+    .second-features-right img {
+        height: 300px;
+        width: 300px;
+    }
+    .sponsors-list{
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+    .company{
+        padding: 30px 0px;
+    }
+    .containers{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
