@@ -22,7 +22,7 @@
 
 header {
     display: flex;
-    /* width: 100%; */
+    width: 100%;
     justify-content: space-around;
     align-items: center;
     /* grid-auto-rows: minmax(1200px, auto);  */
@@ -348,6 +348,7 @@ ul li {
         display: flex;
         flex-direction: column;
         grid-template-columns: repeat(2,1fr);
+        flex-wrap: wrap;
     }
     .second-features-right img {
         height: 300px;
@@ -362,5 +363,17 @@ ul li {
     }
     .containers{
         grid-template-columns: repeat(1, 1fr);
+    }
+    .featured-infos{
+        margin-top: 20px;
+    }
+    .experience{
+        margin: 0px;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .main-header{
+        color: red;
     }
 }
