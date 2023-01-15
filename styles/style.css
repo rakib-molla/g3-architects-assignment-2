@@ -17,12 +17,12 @@
 /* ==>> header styles <<==  */
 .bg {
     background-color: var(--cool_pink);
-    
+
 }
 
 header {
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     justify-content: space-around;
     align-items: center;
     /* grid-auto-rows: minmax(1200px, auto);  */
@@ -90,6 +90,7 @@ ul li {
     border: none;
     color: #FFF4E7;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 /* ==>> features styles <<== */
@@ -104,11 +105,12 @@ ul li {
     margin-left: 180px;
 }
 
-.features-gallery{
+.features-gallery {
     display: flex;
     flex-wrap: wrap;
 
 }
+
 .features-heading {
     font-weight: 500;
     font-size: 45px;
@@ -172,7 +174,9 @@ ul li {
 }
 
 .div {
-    margin-left: 70px;
+    margin-left: 128px;
+    position: relative;
+    margin-top: -69px;
 }
 
 .experience {
@@ -227,6 +231,7 @@ ul li {
     padding: 30px;
     border-radius: 5px;
 }
+
 .award:hover {
     background-color: #f5e90d;
     transition-duration: 2s;
@@ -273,9 +278,11 @@ ul li {
     display: flex;
     justify-content: center;
 }
-.company{
+
+.company {
     margin-left: 60px;
 }
+
 /* ==>> feature products styles <<==  */
 
 
@@ -327,53 +334,114 @@ ul li {
 
 /* ==>> responsive  styles <<==  */
 @media only screen and (max-width: 576px) {
-    .main-header{
+    .main-header {
         width: 50%;
         flex-direction: column;
         flex-wrap: wrap;
         text-align: center;
         margin: 0px auto;
     }
-    ul{
+
+    ul {
         flex-direction: column;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: center;
     }
-    .container{
+
+    .container {
         flex-direction: column;
         width: 50px;
     }
-    .awards{
+
+    .awards {
         flex-direction: column;
     }
-    .second-features{
+    .div{
+        margin: 0px ;
+    }
+    .second-features {
         display: flex;
         flex-direction: column;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         flex-wrap: wrap;
     }
+
     .second-features-right img {
         height: 300px;
         width: 300px;
     }
-    .sponsors-list{
+
+    .sponsors-list {
         margin-top: 50px;
         flex-wrap: wrap;
     }
-    .company{
+
+    .company {
         padding: 30px 0px;
     }
-    .containers{
+
+    .containers {
         grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
     }
-    .featured-infos{
+
+    .featured-infos {
         margin-top: 20px;
     }
-    .experience{
-        margin: 0px;
+
+    .experience {
+        margin: 0px auto;
     }
 }
 
 @media only screen and (min-width: 577px) and (max-width: 992px) {
-    .main-header{
-        color: red;
+    
+    .main-header {
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 0px auto;
     }
+    .main-header {
+        /* width: 100%;  */
+    }
+   
+    .containers{
+        gap: 20px;
+    }
+    .awards{
+        margin-left: 60px;
+        display: flex;
+        align-items: center;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: flex-start;
+    }
+    .div{
+        margin: 0px auto;
+    }
+    .container{
+        gap: 20px;
+    }
+    
+    .awards{
+        display: flex;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .second-features{
+        margin-left: 50px;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .small_box:nth-child(even){
+        display: none;
+    }
+    .sponsors-list{
+        flex-wrap: wrap;
+        margin-left: 0px;
+    }
+    .sponsors{
+        margin-left: 0px;
+    }
+    
 }
